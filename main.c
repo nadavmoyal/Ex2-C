@@ -22,7 +22,6 @@ print_short(i,j);
 }
 scanf("%c",&c);
 
-
 }
 
 return 0;

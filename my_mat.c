@@ -3,19 +3,27 @@
 int mat[10][10];
 
 void enter_mat(){
-int i=0,j=0;
+int i,j;
 for (i=0;i<10;i++){
     for(j=0;j<10;j++){
     scanf("%d",&mat[i][j]); 
-    if(mat[i][j]==0){
+    if(mat[i][j]==0&&(i!=j)){
         mat[i][j]=10000;
-    } 
+     } 
     }
 }
+// for (i=0;i<10;i++){
+//     for(j=0;j<10;j++){
+//     printf("%d",mat[i][j]); 
+//     if(j==9){
+//         printf("     p    \n");
+//     }
+// }
+// }
 }
 void print_short(int i, int j){
 int a=short_way(i,j);
-if(a==10000){
+if(a==10000||(i==j)){
     printf("-1\n");
 }
   else printf("%d\n",a);
@@ -39,9 +47,17 @@ return mat[x][y];
 }
 
 void bool_way(int i , int j){
-       //call "short_way" and retrun 1 \ 0 if the output is not 0.
-if(short_way(i,j)==10000){
+if(short_way(i,j)==10000 ||short_way(i,j)==0){
     printf("False\n");
 }
-printf("True\n");
+else printf("True\n");
+
+// for (i=0;i<10;i++){
+//     for(j=0;j<10;j++){
+//     printf("%d",mat[i][j]); 
+//     if(j==9){
+//         printf("     p    \n");
+//     }
+// }
+
 }
