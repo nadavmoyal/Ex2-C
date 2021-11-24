@@ -1,32 +1,23 @@
 #include <stdio.h>
 #include "my_mat.h"
 int mat[10][10];
-
 void enter_mat(){
 int i,j;
 for (i=0;i<10;i++){
     for(j=0;j<10;j++){
     scanf("%d",&mat[i][j]); 
-    if(mat[i][j]==0&&(i!=j)){
+    if( (mat[i][j]==0) && (i!=j) ){
         mat[i][j]=10000;
-     } 
     }
+ }
 }
-// for (i=0;i<10;i++){
-//     for(j=0;j<10;j++){
-//     printf("%d",mat[i][j]); 
-//     if(j==9){
-//         printf("     p    \n");
-//     }
-// }
-// }
 }
+
 void print_short(int i, int j){
-int a=short_way(i,j);
-if(a==10000||(i==j)){
+if(short_way(i,j)==10000||(i==j)){
     printf("-1\n");
 }
-  else printf("%d\n",a);
+  else printf("%d\n",short_way(i,j));
 }
 
 int short_way(int i, int j){
@@ -51,13 +42,4 @@ if(short_way(i,j)==10000 ||short_way(i,j)==0){
     printf("False\n");
 }
 else printf("True\n");
-
-// for (i=0;i<10;i++){
-//     for(j=0;j<10;j++){
-//     printf("%d",mat[i][j]); 
-//     if(j==9){
-//         printf("     p    \n");
-//     }
-// }
-
 }

@@ -4,7 +4,6 @@
 int main(){
 int i=0,j=0;
 char c;
-//if(scanf("%c",&c)>0){
 scanf("%c",&c);
 while(c!='D'){
 if(c=='A'){
@@ -21,8 +20,6 @@ scanf("%d",&j);
 print_short(i,j);
 }
 scanf("%c",&c);
-
 }
-
 return 0;
 }
